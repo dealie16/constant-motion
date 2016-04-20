@@ -6,9 +6,10 @@ public class PlatformController : MonoBehaviour {
 	[HideInInspector] public bool jump = false;
 	[HideInInspector] public bool flip = false;
 	public float moveForce = 100f;
-	public float jumpForce = 500f;
+	public float jumpForce = 700f;
 	public float minSpeed = 10f;
 	public float maxSpeed = 100f;
+	public float deathSpeed = 2f;
 
 
 	private Rigidbody2D rb2d;
@@ -25,7 +26,7 @@ public class PlatformController : MonoBehaviour {
 	void Update () {
 		bool death = Physics2D.IsTouchingLayers(collider, LayerMask.GetMask("Death"));
 
-		if (death) {
+		if (death || Mathf.Abs(rb2d.velocity.x) < 2f) {
 			Debug.Log("You Died");
 		}
 
@@ -46,8 +47,8 @@ public class PlatformController : MonoBehaviour {
 		float h = Input.GetAxis("Horizontal");
 
 		rb2d.AddForce(Vector2.right * h * moveForce);
-
-		float vel_x = Mathf.Clamp(rb2d.velocity.x, -1f, 1f) * Mathf.Clamp(Mathf.Abs(rb2d.velocity.x), minSpeed, maxSpeed);
+		int sign = rb2d.velocity.x > 0 ? 1 : -1;
+		float vel_x = sign * Mathf.Clamp(Mathf.Abs(rb2d.velocity.x), minSpeed, maxSpeed);
 
 		if (flip) {
 			vel_x *= -1;
