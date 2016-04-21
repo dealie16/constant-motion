@@ -63,6 +63,7 @@ public class PlatformController : MonoBehaviour {
 
 		float h = Input.GetAxis("Horizontal");
 		int sign = rb2d.velocity.x > 0 ? 1 : -1;
+        h *= sign;
 		Vector2 v_base = sign == 1? Vector2.right: Vector2.left;
 		rb2d.AddForce(v_base * h * moveForce);
 		float vel_x = sign * Mathf.Clamp(Mathf.Abs(rb2d.velocity.x), minSpeed, maxSpeed);
