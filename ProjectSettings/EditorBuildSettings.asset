@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Levels/Controls Screen.unity
   - enabled: 1
     path: Assets/Levels/Start Screen.unity
+  - enabled: 1
+    path: Assets/Levels/Level Screen.unity
