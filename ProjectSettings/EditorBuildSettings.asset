@@ -4,4 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Levels/Demo Level.unity
+  - enabled: 1
+    path: Assets/Levels/SarcasticWin.unity
+  - enabled: 1
+    path: Assets/Levels/Controls Screen.unity
+  - enabled: 1
+    path: Assets/Levels/Start Screen.unity

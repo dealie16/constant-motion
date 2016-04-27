@@ -17,6 +17,8 @@ public class PlatformController : MonoBehaviour {
 	private new Collider2D collider;
 	private bool dead;
 	private int jumps;
+    private float storedXVel, storedYVel;
+    private bool paused;
 
 
 	// Use this for initialization
@@ -39,6 +41,19 @@ public class PlatformController : MonoBehaviour {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 			dead = true;
 		}
+
+        if (Input.GetKeyDown("p")) {
+            if (paused) {
+                rb2d.velocity = new Vector2(storedXVel, storedYVel);
+                Time.timeScale = 1;
+                paused = false;
+            } else {
+                storedXVel = rb2d.velocity.x;
+                storedYVel = rb2d.velocity.y;
+                Time.timeScale = 0;
+                paused = true;
+            }
+        }
 
 		bool grounded = Physics2D.IsTouchingLayers(collider, LayerMask.GetMask("Ground"));
 
