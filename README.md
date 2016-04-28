@@ -17,3 +17,9 @@ playing other games and self imposing this concept.
 The only cheat is that while paused you can press *n* and the next checkpoint
 will be marked as achieved. This will make you respawn at the next checkpoint
 after dying.
+
+## Assets
+### Music
+[L.S.S Fast Speed Vol. 1](https://www.assetstore.unity3d.com/en/#!/content/49193)
+### Art
+All art was self made or sourced through sites that explictily said the art was free for non-commerial products
