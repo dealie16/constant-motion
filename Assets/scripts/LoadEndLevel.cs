@@ -1,21 +1,33 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
+
 
 public class LoadEndLevel : MonoBehaviour
 {
     [SerializeField] private int deathRec;
     [SerializeField] private float timeRec;
 
-    public void LoadEnd()
+    public Collider2D player;
+
+    private Collider2D coll;
+
+    void Start()
     {
-        Time.timeScale = 1;
-        if (PlayerPrefs.GetInt("cleanRun") == 1 && PlayerPrefs.GetInt("deaths") < deathRec && PlayerPrefs.GetFloat("time") < timeRec)
+        coll = this.GetComponent<Collider2D>();
+    }
+
+    void Update()
+    {
+        if (coll.IsTouching(player))
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("SarcasticWin");
-        }
-        else
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("BasicWin");
+            if (PlayerPrefs.GetInt("cleanRun") == 1 && PlayerPrefs.GetInt("deaths") < deathRec && PlayerPrefs.GetFloat("time") < timeRec)
+            {
+                SceneManager.LoadScene("SarcasticWin");
+            } else
+            {
+                SceneManager.LoadScene("BasicWin");
+            }
         }
     }
 }

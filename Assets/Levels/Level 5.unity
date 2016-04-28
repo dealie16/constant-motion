@@ -8477,6 +8477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathRec: 75
   timeRec: 450
+  player: {fileID: 1961940439}
 --- !u!4 &1387502027
 Transform:
   m_ObjectHideFlags: 0
