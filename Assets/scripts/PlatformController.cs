@@ -134,10 +134,9 @@ public class PlatformController : MonoBehaviour {
 		deaths++;
 		Checkpoint last_checkpoint = checkpoints[0];
 		for (int i = 0; i < checkpoints.Count; i++) {
-			if (!checkpoints[i].isAchieved()) {
-				break;
+			if (checkpoints[i].isAchieved()) {
+				last_checkpoint = checkpoints[i];
 			}
-			last_checkpoint = checkpoints[i];
 		}
 		this.transform.position = last_checkpoint.transform.position;
 		float speed = minSpeed;
