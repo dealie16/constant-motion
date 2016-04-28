@@ -56,7 +56,7 @@ public class PlatformController : MonoBehaviour {
 			}
 		}
 
-        if (Input.GetKeyDown("p")) {
+		if (Input.GetKeyDown(KeyCode.P)) {
             if (paused) {
                 rb2d.velocity = new Vector2(storedXVel, storedYVel);
                 Time.timeScale = 1;
@@ -87,6 +87,16 @@ public class PlatformController : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.LeftShift)) {
 			flip = true;
+		}
+
+
+		if (paused && Input.GetKeyDown(KeyCode.N)) {
+			for (int i = 0; i < checkpoints.Count; i++) {
+				if (!checkpoints[i].isAchieved()) {
+					checkpoints[i].Achieved();
+					break;
+				}
+			}
 		}
 	}
 
