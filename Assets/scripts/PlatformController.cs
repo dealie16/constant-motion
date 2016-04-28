@@ -30,16 +30,18 @@ public class PlatformController : MonoBehaviour {
 
     // Use this for initialization
     void Awake () {
+		deaths = PlayerPrefs.GetInt("deaths", 0);
 		rb2d = GetComponent<Rigidbody2D>();
 		collider = GetComponent<Collider2D>();
         pauseScreen.SetActive(false);
-        time = 0;
-		player_death();
+		time = PlayerPrefs.GetFloat("time", 0f);
+		player_death(false);
 	}
 
 	// Update is called once per frame
 	void Update () {
         time += Time.deltaTime;
+		PlayerPrefs.SetFloat("time", time);
 
 		bool death = Physics2D.IsTouchingLayers(collider, LayerMask.GetMask("Death"));
 
@@ -131,7 +133,14 @@ public class PlatformController : MonoBehaviour {
     }
 
 	void player_death() {
-		deaths++;
+		player_death(true);
+	}
+
+	void player_death(bool realDeath) {
+		if (realDeath) {
+			deaths++;
+			PlayerPrefs.SetInt("deaths", deaths);
+		}
 		Checkpoint last_checkpoint = checkpoints[0];
 		for (int i = 0; i < checkpoints.Count; i++) {
 			if (checkpoints[i].isAchieved()) {
