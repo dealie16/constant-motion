@@ -2028,7 +2028,7 @@ Transform:
   - {fileID: 1643154024}
   - {fileID: 631225321}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1 &439118919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,7 +2493,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 106410, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
       propertyPath: m_Name
-      value: Checkpoint 3
+      value: Checkpoint 4
       objectReference: {fileID: 0}
     - target: {fileID: 11415188, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
       propertyPath: achieved
@@ -6483,7 +6483,7 @@ Transform:
   m_LocalScale: {x: 16.466688, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &1022904555
 GameObject:
   m_ObjectHideFlags: 0
@@ -8182,7 +8182,59 @@ Transform:
   - {fileID: 76217496}
   - {fileID: 484369591}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
+--- !u!1001 &1344328867
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 433782, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 57.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 433782, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 14.191464
+      objectReference: {fileID: 0}
+    - target: {fileID: 433782, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 433782, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 433782, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 433782, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 433782, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 433782, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 106410, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: m_Name
+      value: Checkpoint 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &1344328868 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11415188, guid: 6d4989f8e155747e2be43f9c2452e7e7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1344328867}
+  m_Script: {fileID: 11500000, guid: 32a93745903b44d7cb568c5f342a9c57, type: 3}
 --- !u!1 &1347553893
 GameObject:
   m_ObjectHideFlags: 0
@@ -8385,7 +8437,7 @@ Transform:
   m_Children:
   - {fileID: 984317434}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &1399702768
 GameObject:
   m_ObjectHideFlags: 0
@@ -8930,7 +8982,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!1 &1538252088
 GameObject:
   m_ObjectHideFlags: 0
@@ -9516,7 +9568,7 @@ Transform:
   - {fileID: 869837225}
   - {fileID: 315005508}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &1668824468
 GameObject:
   m_ObjectHideFlags: 0
@@ -10961,7 +11013,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!61 &1961940439
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11016,6 +11068,7 @@ MonoBehaviour:
   - {fileID: 1734390728}
   - {fileID: 1607092689}
   - {fileID: 1923418099}
+  - {fileID: 1344328868}
   - {fileID: 1639182130}
   timer: {fileID: 1182070323}
   deathCount: {fileID: 1182070322}
