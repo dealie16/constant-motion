@@ -601,10 +601,12 @@ MonoBehaviour:
   minSpeed: 10
   maxSpeed: 100
   deathSpeed: 2
+  frames_no_motion: 2
   maxJumps: 1
   checkpoints:
   - {fileID: 1774749148}
   - {fileID: 123427888}
+  - {fileID: 1041586094}
   timer: {fileID: 1432404561}
   deathCount: {fileID: 1432404560}
   pauseScreen: {fileID: 1432404558}
@@ -1346,6 +1348,12 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1041586094 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11415188, guid: 6d4989f8e155747e2be43f9c2452e7e7,
+    type: 2}
+  m_PrefabInternal: {fileID: 997890107}
+  m_Script: {fileID: 11500000, guid: 32a93745903b44d7cb568c5f342a9c57, type: 3}
 --- !u!1 &1057563181
 GameObject:
   m_ObjectHideFlags: 0
