@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlatformController : MonoBehaviour {
 
@@ -13,10 +14,11 @@ public class PlatformController : MonoBehaviour {
 	public float maxSpeed = 100f;
 	public float deathSpeed = 2f;
 	public int maxJumps = 2;
+	public List<Checkpoint> checkpoints;
 
 	private Rigidbody2D rb2d;
 	private new Collider2D collider;
-	private bool dead;
+	private int deaths = -1;
 	private int jumps;
     private float storedXVel, storedYVel, time;
     private bool paused;
@@ -29,11 +31,11 @@ public class PlatformController : MonoBehaviour {
     // Use this for initialization
     void Awake () {
 		rb2d = GetComponent<Rigidbody2D>();
-		rb2d.velocity = new Vector2(minSpeed, 0);
 		collider = GetComponent<Collider2D>();
 		dead = false;
         pauseScreen.SetActive(false);
         time = 0;
+		player_death();
 	}
 
 	// Update is called once per frame
@@ -47,8 +49,14 @@ public class PlatformController : MonoBehaviour {
 		bool death = Physics2D.IsTouchingLayers(collider, LayerMask.GetMask("Death"));
 
 		if (death || Mathf.Abs(rb2d.velocity.x) < 2f) {
-			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-			dead = true;
+			player_death();
+		}
+
+		foreach (Checkpoint checkpoint in checkpoints) {
+			bool achieved = GetComponent<Renderer>().bounds.Intersects(checkpoint.GetComponent<Renderer>().bounds);
+			if (achieved) {
+				checkpoint.Achieved();
+			}
 		}
 
         if (Input.GetKeyDown("p")) {
@@ -85,10 +93,6 @@ public class PlatformController : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		if (dead) {
-			return;
-		}
-
 		float h = Input.GetAxis("Horizontal");
 		int sign = rb2d.velocity.x > 0 ? 1 : -1;
         h *= sign;
@@ -129,4 +133,17 @@ public class PlatformController : MonoBehaviour {
 
         return text;
     }
+
+	void player_death() {
+		deaths++;
+		Checkpoint last_checkpoint = checkpoints[0];
+		for (int i = 0; i < checkpoints.Count; i++) {
+			if (!checkpoints[i].isAchieved()) {
+				break;
+			}
+			last_checkpoint = checkpoints[i];
+		}
+		this.transform.position = last_checkpoint.transform.position;
+		rb2d.velocity = new Vector2(minSpeed, 0);
+	}
 }
