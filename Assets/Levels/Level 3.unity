@@ -310,6 +310,14 @@ Prefab:
       propertyPath: spawnGoingLeft
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19809114, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19809114, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
   m_IsPrefabParent: 0
@@ -601,7 +609,6 @@ MonoBehaviour:
   minSpeed: 10
   maxSpeed: 100
   deathSpeed: 2
-  frames_no_motion: 2
   maxJumps: 1
   checkpoints:
   - {fileID: 1774749148}
@@ -1271,6 +1278,14 @@ Prefab:
     - target: {fileID: 11415188, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
       propertyPath: spawnGoingLeft
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19809114, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19809114, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
@@ -3403,6 +3418,14 @@ Prefab:
     - target: {fileID: 106410, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
       propertyPath: m_Name
       value: Start Point
+      objectReference: {fileID: 0}
+    - target: {fileID: 19809114, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19809114, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
