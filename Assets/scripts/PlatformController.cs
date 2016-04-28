@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlatformController : MonoBehaviour {
@@ -17,21 +18,29 @@ public class PlatformController : MonoBehaviour {
 	private new Collider2D collider;
 	private bool dead;
 	private int jumps;
-    private float storedXVel, storedYVel;
+    private float storedXVel, storedYVel, time;
     private bool paused;
 
+    [SerializeField] private Text timer;
+    [SerializeField] private Text deathCount;
+    [SerializeField] private GameObject pauseScreen;
 
-	// Use this for initialization
-	void Awake () {
+
+    // Use this for initialization
+    void Awake () {
 		rb2d = GetComponent<Rigidbody2D>();
 		rb2d.velocity = new Vector2(minSpeed, 0);
 		collider = GetComponent<Collider2D>();
 		dead = false;
+        pauseScreen.SetActive(false);
+        time = 0;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (dead) {
+        time += Time.deltaTime;
+
+        if (dead) {
 			return;
 		}
 
@@ -46,14 +55,18 @@ public class PlatformController : MonoBehaviour {
             if (paused) {
                 rb2d.velocity = new Vector2(storedXVel, storedYVel);
                 Time.timeScale = 1;
+                pauseScreen.SetActive(false);
                 paused = false;
             } else {
                 storedXVel = rb2d.velocity.x;
                 storedYVel = rb2d.velocity.y;
                 Time.timeScale = 0;
+                pauseScreen.SetActive(true);
                 paused = true;
             }
         }
+
+        timer.text = GetTimeText();
 
 		bool grounded = Physics2D.IsTouchingLayers(collider, LayerMask.GetMask("Ground"));
 
@@ -95,4 +108,25 @@ public class PlatformController : MonoBehaviour {
 			jump = false;
 		}
 	}
+
+    string GetTimeText()
+    {
+        int m = (int)time / 60;
+        int s = (int)time % 60;
+        int f = (int)((time % 1) * 100);
+        string text = string.Concat(f, "");
+        if (text.Length < 2){
+            text = text.Insert(0, "0");
+        }
+        text = string.Concat(s, ":", text);
+        if (text.Length < 5) {
+            text = text.Insert(0, "0");
+        }
+        text = string.Concat(m, ":", text);
+        if (text.Length < 8) {
+            text = text.Insert(0, "0");
+        }
+
+        return text;
+    }
 }
