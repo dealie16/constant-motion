@@ -310,6 +310,18 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 22397902, guid: 0663be392d905d546b966614f5341221, type: 2}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22397902, guid: 0663be392d905d546b966614f5341221, type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1648634512}
+    - target: {fileID: 22397902, guid: 0663be392d905d546b966614f5341221, type: 2}
+      propertyPath: m_PlaneDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0663be392d905d546b966614f5341221, type: 2}
   m_IsPrefabParent: 0
