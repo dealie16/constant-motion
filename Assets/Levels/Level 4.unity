@@ -2982,7 +2982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf8a859bd03146b7b50bf70114c97fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: SarcasticWin
+  nextLevel: Level 5
   player: {fileID: 1961940439}
 --- !u!4 &1387502027
 Transform:
