@@ -139,6 +139,10 @@ public class PlatformController : MonoBehaviour {
 			last_checkpoint = checkpoints[i];
 		}
 		this.transform.position = last_checkpoint.transform.position;
-		rb2d.velocity = new Vector2(minSpeed, 0);
+		float speed = minSpeed;
+		if (last_checkpoint.spawnGoingLeft) {
+			speed = speed * -1f;
+		}
+		rb2d.velocity = new Vector2(speed, 0);
 	}
 }

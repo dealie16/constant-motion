@@ -591,7 +591,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1.78}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &438253195
@@ -3500,11 +3500,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 433782, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 123.62
+      value: 135.08
       objectReference: {fileID: 0}
     - target: {fileID: 433782, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.28
+      value: 4.73
       objectReference: {fileID: 0}
     - target: {fileID: 433782, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3528,11 +3528,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 433782, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 106410, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
       propertyPath: m_Name
       value: Checkpoint 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415188, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: achieved
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415188, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
+      propertyPath: spawnGoingLeft
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d4989f8e155747e2be43f9c2452e7e7, type: 2}
