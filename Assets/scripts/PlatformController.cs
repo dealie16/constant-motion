@@ -70,6 +70,7 @@ public class PlatformController : MonoBehaviour {
         }
 
         timer.text = GetTimeText();
+        deathCount.text = deaths.ToString();
 
 		bool grounded = Physics2D.IsTouchingLayers(collider, LayerMask.GetMask("Ground"));
 
