@@ -322,6 +322,10 @@ Prefab:
       propertyPath: m_PlaneDistance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 22476460, guid: 0663be392d905d546b966614f5341221, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0663be392d905d546b966614f5341221, type: 2}
   m_IsPrefabParent: 0
