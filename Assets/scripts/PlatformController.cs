@@ -32,7 +32,6 @@ public class PlatformController : MonoBehaviour {
     void Awake () {
 		rb2d = GetComponent<Rigidbody2D>();
 		collider = GetComponent<Collider2D>();
-		dead = false;
         pauseScreen.SetActive(false);
         time = 0;
 		player_death();
@@ -41,10 +40,6 @@ public class PlatformController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         time += Time.deltaTime;
-
-        if (dead) {
-			return;
-		}
 
 		bool death = Physics2D.IsTouchingLayers(collider, LayerMask.GetMask("Death"));
 
