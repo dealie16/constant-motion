@@ -8441,8 +8441,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1387502027}
-  - 114: {fileID: 1387502026}
   - 61: {fileID: 1387502025}
+  - 114: {fileID: 1387502026}
   m_Layer: 0
   m_Name: End of Level
   m_TagString: Untagged
@@ -8472,11 +8472,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1387502024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adf8a859bd03146b7b50bf70114c97fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b24e79079769ba499476d5f87c5ae31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: SarcasticWin
-  player: {fileID: 1961940439}
+  deathRec: 75
+  timeRec: 450
 --- !u!4 &1387502027
 Transform:
   m_ObjectHideFlags: 0

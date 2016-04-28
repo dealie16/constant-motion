@@ -819,6 +819,7 @@ GameObject:
   - 114: {fileID: 771631046}
   - 114: {fileID: 771631045}
   - 114: {fileID: 771631048}
+  - 114: {fileID: 771631049}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -883,6 +884,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 771631049}
+        m_MethodName: CleanRunStatus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level 1
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 771631048}
         m_MethodName: LoadByString
         m_Mode: 5
@@ -938,6 +950,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fee568d4f11e244fade0e53fb0abf7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &771631049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771631043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d5660b54fac3c44588fd505883be331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1217422959
@@ -1083,7 +1106,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
